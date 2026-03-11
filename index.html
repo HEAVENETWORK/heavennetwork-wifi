@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HEAVENET WIFI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Orbitron',sans-serif;
+background:linear-gradient(180deg,#020617,#0f172a);
+color:white;
+text-align:center;
+}
+
+.header{
+padding:25px;
+}
+
+.logo{
+width:120px;
+}
+
+h1{
+color:#38bdf8;
+margin:10px;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+padding:10px;
+}
+
+.plan{
+background:#0f172a;
+border:2px solid #38bdf8;
+border-radius:12px;
+padding:20px;
+margin:15px;
+box-shadow:0 0 15px rgba(56,189,248,0.4);
+}
+
+.plan h2{
+margin:5px;
+color:#7dd3fc;
+}
+
+.price{
+font-size:28px;
+color:#38bdf8;
+}
+
+button{
+background:#38bdf8;
+border:none;
+padding:12px 25px;
+border-radius:8px;
+font-size:16px;
+margin-top:10px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0284c7;
+}
+
+.promo{
+background:#1e293b;
+padding:15px;
+margin:20px;
+border-radius:10px;
+}
+
+.footer{
+font-size:13px;
+margin-top:30px;
+padding:15px;
+color:#94a3b8;
+}
+
+.timer{
+font-size:18px;
+margin-top:8px;
+color:#22c55e;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<img src="logo.png" class="logo">
+
+<h1>HEAVENET WIFI</h1>
+<p>Internet inalámbrico de alta velocidad</p>
+
+</div>
+
+<div class="container">
+
+<div class="plan">
+<h2>Plan Diario</h2>
+<p class="price">$20</p>
+<p>Acceso por 1 día</p>
+<div class="timer" id="timer1"></div>
+<button>Conectar</button>
+</div>
+
+<div class="plan">
+<h2>Plan 7 Días</h2>
+<p class="price">$50</p>
+<p>Acceso por 7 días</p>
+<div class="timer" id="timer2"></div>
+<button>Conectar</button>
+</div>
+
+<div class="plan">
+<h2>Plan Mensual</h2>
+<p class="price">$200</p>
+<p>Internet ilimitado</p>
+<p>Hasta 4 dispositivos</p>
+<p>Instalación GRATIS</p>
+<div class="timer" id="timer3"></div>
+<button>Conectar</button>
+</div>
+
+<div class="promo">
+
+<h3>🎁 Promoción</h3>
+
+<p>Por cada cliente referido obtén</p>
+
+<p><b>1 día GRATIS</b></p>
+
+<p>Máximo 3 referidos por usuario</p>
+
+</div>
+
+</div>
+
+<div class="footer">
+
+<p>Contacto WhatsApp</p>
+
+<p>📞 5562418514</p>
+
+<p>Red: HEAVENET WIFI</p>
+
+<p style="margin-top:15px">
+
+Aviso de privacidad: El uso del servicio implica la aceptación de nuestros términos.
+Se aplican restricciones de uso y políticas de red.
+
+</p>
+
+</div>
+
+<script>
+
+function countdown(element,seconds){
+
+let timer=seconds;
+
+setInterval(function(){
+
+let d=Math.floor(timer/86400);
+let h=Math.floor((timer%86400)/3600);
+let m=Math.floor((timer%3600)/60);
+let s=Math.floor(timer%60);
+
+document.getElementById(element).innerHTML=
+"Tiempo de acceso: "+d+"d "+h+"h "+m+"m "+s+"s";
+
+timer--;
+
+},1000);
+
+}
+
+countdown("timer1",86400);
+countdown("timer2",604800);
+countdown("timer3",2592000);
+
+</script>
+
+</body>
+</html>
